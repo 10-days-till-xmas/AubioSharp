@@ -11,7 +11,8 @@ public static class GeneratorRunner
         new TraverseRoot(),
         new TraverseIo(),
         new TraverseEffects(),
-        new TraverseUtils()
+        new TraverseUtils(),
+        new TraverseNotes()
     ];
 
     public static void Run(DirectoryPath workingDirectory, DirectoryPath aubioSourceDirectory)
