@@ -14,7 +14,7 @@ public static class DoxygenRunner
         Information($"{DoxygenConfig}");
         Context.DotNetToolExecute(DoxygenToolPackageId, new DotNetToolExecuteSettings
         {
-            ArgumentCustomization = args =>
+            ArgumentCustomization = static args =>
                 args.AppendQuoted(DoxygenConfig.FullPath)
         });
     }

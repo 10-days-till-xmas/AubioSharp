@@ -31,12 +31,13 @@ public sealed unsafe class FvecTests
         FvecMethods.fvec_ones(vec);
         AssertAllEqual(vec, 1f);
 
-// all elements can be set to `0.`
+        // all elements can be set to `0.`
         FvecMethods.fvec_zeros(vec);
         AssertAllEqual(vec, 0f);
 
-// each element can be accessed directly
-        for (i = 0; i < vec->length; i++){
+        // each element can be accessed directly
+        for (i = 0; i < vec->length; i++)
+        {
             vec->data[i] = i;
             Assert.Equal(i, vec->data[i]);
         }
@@ -44,30 +45,31 @@ public sealed unsafe class FvecTests
         FvecMethods.fvec_print(vec);
 
         FvecMethods.fvec_set_sample(vec, 3, 2);
-        Assert.True(FvecMethods.fvec_get_sample(vec, 2) == 3);
+        // ReSharper disable once CompareOfFloatsByEqualityOperator
+        Assert.Equal(3, FvecMethods.fvec_get_sample(vec, 2));
 
         Assert.True(FvecMethods.fvec_get_data(vec) == vec->data);
 
-// wrong parameters
+        // wrong parameters
         Assert.Null(FvecMethods.new_fvec(unchecked((uint)-1)));
 
-// copy to an identical size works
+        // copy to an identical size works
         FvecMethods.fvec_copy(vec, otherVec);
         FvecMethods.del_fvec(otherVec);
 
-// copy to a different size fail
+        // copy to a different size fail
         otherVec = FvecMethods.new_fvec(length + 1);
         FvecMethods.fvec_copy(vec, otherVec);
         FvecMethods.del_fvec(otherVec);
 
-// copy to a different size fail
+        // copy to a different size fail
         otherVec = FvecMethods.new_fvec(length - 1);
         FvecMethods.fvec_copy(vec, otherVec);
 
-// now destroys the vector
-        if (vec != (Fvec*)null)
+        // now destroys the vector
+        if (vec != (Fvec*)IntPtr.Zero)
             FvecMethods.del_fvec(vec);
-        if (otherVec != (Fvec*)null)
+        if (otherVec != (Fvec*)IntPtr.Zero)
             FvecMethods.del_fvec(otherVec);
     }
 }

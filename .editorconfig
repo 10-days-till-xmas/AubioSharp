@@ -1,0 +1,2 @@
+[*.cs]
+dotnet_diagnostic.xUnit2024.severity = warning

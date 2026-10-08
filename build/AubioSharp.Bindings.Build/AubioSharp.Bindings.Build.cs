@@ -27,7 +27,7 @@ var aubioSourceDir = Argument("aubio-source", defaultAubioSourceDir);
 #region Generators
 
 Task("TestDoxygen")
-   .Does(() =>
+   .Does(static () =>
     {
         DoxygenRunner.GenerateDocs();
         Information("done");

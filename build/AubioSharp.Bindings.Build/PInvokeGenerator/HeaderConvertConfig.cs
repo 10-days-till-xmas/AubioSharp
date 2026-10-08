@@ -1,4 +1,4 @@
-// ReSharper disable ReturnTypeCanBeEnumerable.Global I want explicit 
+// ReSharper disable ReturnTypeCanBeEnumerable.Global - I want explicit types
 
 using System.Collections.Immutable;
 
