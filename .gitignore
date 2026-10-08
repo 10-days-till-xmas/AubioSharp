@@ -3,3 +3,10 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+/lib/
+
+# ignore these since there would be lots of churn
+# to regenerate, run:
+# `AubioSharp.Bindings.Build --target RunGenerator`
+/test/AubioSharp.Bindings.Tests/Generated/
+/src/AubioSharp.Bindings/Generated/
