@@ -1,0 +1,30 @@
+--traverse
+D:\source\aubio\src\io/audio_unit.h
+D:\source\aubio\src\io/ioutils.h
+D:\source\aubio\src\io/sink.h
+D:\source\aubio\src\io/sink_apple_audio.h
+D:\source\aubio\src\io/sink_sndfile.h
+D:\source\aubio\src\io/sink_wavwrite.h
+D:\source\aubio\src\io/source.h
+D:\source\aubio\src\io/source_apple_audio.h
+D:\source\aubio\src\io/source_avcodec.h
+D:\source\aubio\src\io/source_sndfile.h
+D:\source\aubio\src\io/source_waveread.h
+
+--remap-type
+_aubio_sink_t=AubioSink
+_aubio_source_t=AubioSource
+
+--with-class
+aubio_sink_*=AubioSinkMethods
+aubio_source_*=AubioSourceMethods
+
+--prefix-strip
+aubio_sink_
+
+--prefix-strip
+aubio_source_
+
+--native-type-names-to-strip
+"aubio_sink_t *"
+"aubio_source_t *"

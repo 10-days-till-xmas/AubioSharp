@@ -1,0 +1,43 @@
+--traverse
+    D:\source\aubio\src\fvec.h
+    D:\source\aubio\src\cvec.h
+    D:\source\aubio\src\fmat.h
+    D:\source\aubio\src\lvec.h
+    D:\source\aubio\src\mathutils.h
+    D:\source\aubio\src\musicutils.h
+    D:\source\aubio\src\vecutils.h
+
+--remap-type
+    fvec_t=Fvec
+    cvec_t=Cvec
+    fmat_t=Fmat
+    lvec_t=Lvec
+
+--with-class
+    fvec_*=FvecMethods
+        new_fvec=FvecMethods
+        del_fvec=FvecMethods
+    cvec_*=CvecMethods
+        new_cvec=CvecMethods
+        del_cvec=CvecMethods
+    fmat_*=FmatMethods
+        new_fmat=FmatMethods
+        del_fmat=FmatMethods
+    lvec_*=LvecMethods
+        new_lvec=LvecMethods
+        del_lvec=LvecMethods
+
+--prefix-strip
+fvec_
+--prefix-strip
+cvec_
+--prefix-strip
+fmat_
+--prefix-strip
+lvec_
+
+--native-type-names-to-strip
+fvec_t *
+cvec_t *
+fmat_t *
+lvec_t *

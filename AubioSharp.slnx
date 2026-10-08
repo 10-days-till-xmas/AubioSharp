@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Build/">
+    <Project Path="build/AubioSharp.Bindings.Build/AubioSharp.Bindings.Build.csproj" />
+  </Folder>
+  <Folder Name="/lib/">
+    <File Path="lib/aubio.dll" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="test/AubioSharp.Bindings.Tests/AubioSharp.Bindings.Tests.csproj" />
+  </Folder>
+  <Project Path="src/AubioSharp.Bindings/AubioSharp.Bindings.csproj" />
+</Solution>

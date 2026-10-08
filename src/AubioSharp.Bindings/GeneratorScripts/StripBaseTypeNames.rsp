@@ -1,0 +1,5 @@
+--native-type-names-to-strip
+const
+uint_t
+smpl_t *
+smpl_t
