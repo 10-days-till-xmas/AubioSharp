@@ -22,6 +22,6 @@ public sealed class PInvokeExtractTests(AubioLibraryFixture aubioLibHandle) : IC
     [MemberData(nameof(MethodNames))]
     public void VerifyFunctionPresenceInDll(string funcName)
     {
-        Assert.True(NativeLibrary.TryGetExport(aubioLibHandle.Handle, funcName, out _));
+        Assert.True(NativeLibrary.TryGetExport(aubioLibHandle.Handle, funcName, out _), $"{funcName} is not exported");
     }
 }
