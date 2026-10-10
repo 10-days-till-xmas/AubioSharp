@@ -19,6 +19,7 @@ public sealed class TraverseUtils : HeaderConvertConfig
         "_aubio_hist_t",
         "_aubio_parameter_t",
         "_aubio_scale_t",
-        "aubio_log_level"
+        "aubio_log_level",
+        "aubio_log", // hack to separate out logging methods
     ];
 }

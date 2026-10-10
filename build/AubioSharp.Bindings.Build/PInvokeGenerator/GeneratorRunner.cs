@@ -12,7 +12,13 @@ public static class GeneratorRunner
         new TraverseIo(),
         new TraverseEffects(),
         new TraverseUtils(),
-        new TraverseNotes()
+        new TraverseNotes(),
+        new TraverseOnset(),
+        new TraversePitch(),
+        new TraverseSpectral(),
+        new TraverseSynth(),
+        new TraverseTempo(),
+        new TraverseTemporal()
     ];
 
     public static void Run(DirectoryPath workingDirectory, DirectoryPath aubioSourceDirectory)
@@ -43,6 +49,7 @@ public static class GeneratorRunner
                         aubioSourceDirectory.Combine("io")
                                             .CombineWithFilePath("sink.c")
                                             .FullPath);
+                args.AppendSwitch("--remap-type", "aubio_log_function_t=AubioLogFunction");
                 foreach (var cfg in Configs)
                     args.Remap(cfg);
                 args.AppendSwitch("--language", "c")
