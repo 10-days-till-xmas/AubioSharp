@@ -10,3 +10,5 @@ riderModule.iml
 # `AubioSharp.Bindings.Build --target RunGenerator`
 /test/AubioSharp.Bindings.Tests/Generated/
 /src/AubioSharp.Bindings/Generated/
+# helper file for the command line args generator
+AubioSharp.cmdlineargs.json

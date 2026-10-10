@@ -26,7 +26,7 @@ var aubioSourceDir = Argument("aubio-source", defaultAubioSourceDir);
 
 #region Generators
 
-Task("TestDoxygen")
+Task("RunDoxygen")
    .Does(static () =>
     {
         DoxygenRunner.GenerateDocs();
@@ -70,6 +70,10 @@ Task("Build")
 Task("Test")
    .IsDependentOn("Build")
    .Does(() => DotNetTest(testDir.FullPath));
+
+Task("GenerateAndTest")
+   .IsDependentOn("RunGenerator")
+   .IsDependentOn("Test");
 
 //////////////////////////////////////////////////////////////////////
 // EXECUTION
