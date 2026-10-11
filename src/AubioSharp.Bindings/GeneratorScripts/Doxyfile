@@ -56,7 +56,7 @@ PROJECT_NUMBER         =
 # entered, it will be relative to the location where Doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = "D:/Projects/C#/AubioSharp/src/AubioSharp.Bindings/Generated"
+OUTPUT_DIRECTORY       = "D:/Projects/C#/AubioSharp/src/AubioSharp.Bindings/Docs"
 
 # If the CREATE_SUBDIRS tag is set to YES then Doxygen will create up to 4096
 # sub-directories (in 2 levels) under the output directory of each output format
